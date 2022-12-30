@@ -1,12 +1,13 @@
 import "./App.css";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <h1>Be Smart</h1>
+      <Home/>
       <Footer />
     </div>
   );

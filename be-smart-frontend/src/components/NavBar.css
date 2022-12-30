@@ -1,0 +1,18 @@
+.navbar{
+      background-color:#746D87;
+    
+}
+#logoImg{
+width: 8vw;
+height: auto;
+}
+@media only screen and (max-width: 600px) {
+      #logoImg{
+            width: 18vw;
+            height: auto;
+            }
+}
+.navbar-text{
+      padding: 0.5rem;
+      font-weight: bolder;
+}

@@ -2,48 +2,56 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import './NavBar.css'
 
-function NavBar() {
+import React, { useState } from 'react';
+import {
+  MDBNavbar,
+  MDBContainer,
+  MDBNavbarBrand,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBNavbarToggler,
+  MDBCollapse
+} from 'mdb-react-ui-kit';
+
+export default function NavBar() {
+  const [showNavText, setShowNavText] = useState(false);
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand href="/">
-          <img
-            src="/"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-            alt=""
-          />{" "}
-          Be-Smart
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/register">register</Nav.Link>
-            <Nav.Link href="/">Pricing</Nav.Link>
-            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="/">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="/">
-              Dank memes
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <MDBNavbar expand='lg' className="navbar">
+      <MDBContainer fluid>
+        <img id="logoImg" className="pulse" src={require('../Images/BeSmart.png')} />
+        <MDBNavbarBrand href='#'>BeSmart</MDBNavbarBrand>
+        <MDBNavbarToggler
+          type='button'
+          data-target='#navbarText'
+          aria-controls='navbarText'
+          aria-expanded='false'
+          aria-label='Toggle navigation'
+          onClick={() => setShowNavText(!showNavText)}
+        >
+          <MDBIcon icon='bars' fas />
+        </MDBNavbarToggler>
+        <MDBCollapse navbar show={showNavText}>
+          <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+            <MDBNavbarItem>
+              <MDBNavbarLink active aria-current='page' href='#'> <span className="text-lg-start" >Home Page</span>   </MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink active aria-current='page' href='#'>Features</MDBNavbarLink>
+            </MDBNavbarItem>
+            <MDBNavbarItem>
+              <MDBNavbarLink active aria-current='page' href='#'>Pricing</MDBNavbarLink>
+            </MDBNavbarItem>
+          </MDBNavbarNav>
+      
+          <a href="" className='navbar-text'>Login <MDBIcon fas icon="user" /></a>
+          <a href="" className='navbar-text' >SignUp <MDBIcon fas icon="user-plus" /></a>
+        </MDBCollapse>
+      </MDBContainer>
+    </MDBNavbar>
   );
 }
-
-export default NavBar;
