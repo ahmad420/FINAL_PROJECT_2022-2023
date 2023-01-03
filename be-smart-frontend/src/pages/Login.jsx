@@ -42,6 +42,8 @@ export default function Login() {
 
       <MDBCard className='text-black m-5' style={{ borderRadius: '25px' }}>
         <MDBCardBody>
+        {error && <Alert variant="danger">{error}</Alert>}
+
           <Form onSubmit={handleSubmit}>
             <MDBRow>
               <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>

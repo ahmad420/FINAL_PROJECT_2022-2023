@@ -16,34 +16,34 @@ function App() {
   return (
     <>
       <NavBar />
-      <Container
-        className="d-flex align-items-center justify-content-center"
-        style={{ minHeight: "100vh" }}
-      >
-        <div className="w-100" style={{}}>
-          <Router>
-            <AuthProvider>
-              <Routes>
-                <Route exact path="/profile" element={<PrivateRoute />}>
-                  {/* <Route exact path="/profile" element={<Dashboard />} /> */}
-                </Route>
+      <Container className="d-flex align-items-center justify-content-center"s tyle={{ minHeight: "100vh" }}>
 
-                <Route exact path="/update-profile" element={<PrivateRoute />}>
-                  {/* <Route
-                    exact
-                    path="/update-profile"
-                    element={<UpdateProfile />}
-                  /> */}
-                </Route>
+        <div className="w-100" style={{}}>
+
+          <Router>
+
+            <AuthProvider>
+
+              <Routes>
+
+                <Route exact path="/profile" element={<PrivateRoute />}/>
+                {/* <Route exact path="/profile" element={<Dashboard />} /> */}
+                <Route exact path="/update-profile" element={<UpdateProfile />}/>
                 <Route path="/" element={<Home />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
+
               </Routes>
+
             </AuthProvider>
+
           </Router>
+
         </div>
+
       </Container>
+      
       <Footer />
     </>
   );
