@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Signup from "./pages/SiginUp";
 import { Container, Navbar } from "react-bootstrap";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import PrivateRoute from "./pages/PrivateRoute";
 import ForgotPassword from "./pages/ForgotPassword";
 import UpdateProfile from "./pages/UpdateProfile";
+import Profile from "./pages/Profile";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -28,13 +29,8 @@ function App() {
                   {/* <Route exact path="/profile" element={<Dashboard />} /> */}
                 </Route>
 
-                <Route exact path="/update-profile" element={<PrivateRoute />}>
-                  {/* <Route
-                    exact
-                    path="/update-profile"
-                    element={<UpdateProfile />}
-                  /> */}
-                </Route>
+                <Route path="/profile" element={<Profile />} />
+                <Route path="update-profile" element={<UpdateProfile />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
