@@ -1,59 +1,51 @@
 import React from "react";
+import { Carousel, Nav } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
+import { Navigate } from "react-router-dom";
+import Card from "../components/Home/Card";
+import CardList from "../components/Home/CardsList";
 
-import "./Home.css";
+import "../style/Home.css";
+
 const Home = () => {
   return (
-    <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Accordion Item #1</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>{" "}
-      <Accordion.Item eventKey="3">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+    <div className="Main">
+      <div className="landingpage">
+        <div className="box">
+          <div className="infobox">
+            <p className="infobox-boldtext">
+              Warehouse
+              Managent Software
+            </p>
+            <p className="infobox-slimtext">
+              The WMS will benefit their operational efficiency for both labor and physical space by monitoring work processes at various levels, enhancing productivity, and increasing asset utilization. WMS automation assists with inventory control in a way that improves accuracy, throughput, and speed.
+            </p>
+            <div className="infobox-btnwrapper">
+
+              <button className="infobox-createbtn">Pricing</button>
+            </div>
+          </div>
+          <div className="display">
+            <img className="display-nft" src={require("../Images/BeSmart.png")} />
+
+          </div>
+        </div>
+        <div className="auction">
+          <div className="title">
+            <p className="titlebold">Be Smart Servicse</p>
+
+          </div>
+
+
+          <div className="CardList"> <CardList /></div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
   );
 };
 
