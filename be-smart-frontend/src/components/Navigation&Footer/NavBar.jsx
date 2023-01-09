@@ -21,12 +21,12 @@ export default function NavBar() {
   const [showNavText, setShowNavText] = useState(false);
 
   return (
-    <MDBNavbar expand="lg" className="navbar">
+    <MDBNavbar expand="lg" className="navbar ">
       <MDBContainer fluid>
         <img
           id="logoImg"
           className="pulse"
-          src={require("../Images/BeSmart.png")}
+          src={require("../../Images/BeSmart.png")}
         />
         <MDBNavbarBrand href="/">BeSmart</MDBNavbarBrand>
         <MDBNavbarToggler
@@ -42,7 +42,7 @@ export default function NavBar() {
         <MDBCollapse navbar show={showNavText}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="">
+              <MDBNavbarLink active aria-current="page" href="/">
                 {" "}
                 <span className="text-lg-start">Home Page</span>{" "}
               </MDBNavbarLink>
@@ -53,7 +53,7 @@ export default function NavBar() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="">
+              <MDBNavbarLink active aria-current="page" href="/pricing">
                 Pricing
               </MDBNavbarLink>
             </MDBNavbarItem>

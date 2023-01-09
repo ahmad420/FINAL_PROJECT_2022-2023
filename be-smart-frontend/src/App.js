@@ -8,22 +8,20 @@ import Login from "./pages/Login";
 import PrivateRoute from "./pages/PrivateRoute";
 import ForgotPassword from "./pages/ForgotPassword";
 import UpdateProfile from "./pages/UpdateProfile";
-import Profile from "./pages/Profile";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import NavBar from "./components/Navigation&Footer/NavBar";
+import Footer from "./components/Navigation&Footer/Footer";
 import Home from "./pages/Home";
-import Admin from "./pages/Admin";
+import Pricing from "./pages/Pricing";
+import ProfileAdmin from "./pages/ProfileAdmin";
 
 function App() {
   return (
     <>
       <NavBar />
-      <Container
-        className="d-flex align-items-center justify-content-center"
-        s
-        tyle={{ minHeight: "100vh" }}
-      >
-        <div className="w-100" style={{}}>
+     
+
+        <div className="main-comp" >
+
           <Router>
             <AuthProvider>
               <Routes>
@@ -33,18 +31,24 @@ function App() {
 
                 <Route path="/admin" element={<PrivateRoute />} />
 
-                <Route path="/profile" element={<Profile />} />
-                <Route path="update-profile" element={<UpdateProfile />} />
-                <Route path="/" element={<Home />} />
+                <Route exact path="/profile" element={<PrivateRoute />}/>
+                <Route exact path="/profileAdmin" element={<ProfileAdmin/>}/>
+
+
+                <Route exact path="/update-profile" element={<UpdateProfile />}/>
+                <Route path="/"  element={<Home />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/pricing" element={<Pricing />} />
+
               </Routes>
             </AuthProvider>
           </Router>
         </div>
-      </Container>
 
+      
+      
       <Footer />
     </>
   );
