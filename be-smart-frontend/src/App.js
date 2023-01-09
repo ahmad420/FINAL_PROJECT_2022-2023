@@ -1,5 +1,4 @@
-import React from "react";
-import "./App.css"
+import React, { Fragment } from "react";
 import Signup from "./pages/SiginUp";
 import { Container, Navbar } from "react-bootstrap";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -24,10 +23,13 @@ function App() {
         <div className="main-comp" >
 
           <Router>
-
             <AuthProvider>
-
               <Routes>
+                <Route exact path="/profile" element={<PrivateRoute />}>
+                  {/* <Route exact path="/profile" element={<Dashboard />} /> */}
+                </Route>
+
+                <Route path="/admin" element={<PrivateRoute />} />
 
                 <Route exact path="/profile" element={<PrivateRoute />}/>
                 <Route exact path="/profileAdmin" element={<ProfileAdmin/>}/>
@@ -41,11 +43,8 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
 
               </Routes>
-
             </AuthProvider>
-
           </Router>
-
         </div>
 
       
