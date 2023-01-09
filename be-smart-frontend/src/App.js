@@ -13,42 +13,38 @@ import Footer from "./components/Navigation&Footer/Footer";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import ProfileAdmin from "./pages/ProfileAdmin";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
     <>
       <NavBar />
-     
 
-        <div className="main-comp" >
+      <div className="main-comp">
+        <Router>
+          <AuthProvider>
+            <Routes>
+              <Route exact path="/profile" element={<PrivateRoute />}>
+                {/* <Route exact path="/profile" element={<Dashboard />} /> */}
+              </Route>
 
-          <Router>
-            <AuthProvider>
-              <Routes>
-                <Route exact path="/profile" element={<PrivateRoute />}>
-                  {/* <Route exact path="/profile" element={<Dashboard />} /> */}
-                </Route>
+              <Route path="/admin" element={<PrivateRoute />} />
 
-                <Route path="/admin" element={<PrivateRoute />} />
+              <Route exact path="/profile" element={<PrivateRoute />} />
+              <Route exact path="/profileAdmin" element={<ProfileAdmin />} />
 
-                <Route exact path="/profile" element={<PrivateRoute />}/>
-                <Route exact path="/profileAdmin" element={<ProfileAdmin/>}/>
+              <Route exact path="/update-profile" element={<UpdateProfile />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/adminpage" element={<Admin />} />
+            </Routes>
+          </AuthProvider>
+        </Router>
+      </div>
 
-
-                <Route exact path="/update-profile" element={<UpdateProfile />}/>
-                <Route path="/"  element={<Home />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
-                <Route path="/pricing" element={<Pricing />} />
-
-              </Routes>
-            </AuthProvider>
-          </Router>
-        </div>
-
-      
-      
       <Footer />
     </>
   );
