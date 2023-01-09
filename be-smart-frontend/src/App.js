@@ -12,6 +12,7 @@ import Profile from "./pages/Profile";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
                 <Route exact path="/profile" element={<PrivateRoute />}>
                   {/* <Route exact path="/profile" element={<Dashboard />} /> */}
                 </Route>
+
+                <Route path="/admin" element={<PrivateRoute />} />
 
                 <Route path="/profile" element={<Profile />} />
                 <Route path="update-profile" element={<UpdateProfile />} />
