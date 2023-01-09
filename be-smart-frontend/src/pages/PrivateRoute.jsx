@@ -1,14 +1,14 @@
-import React from "react";
-import { Route, useNavigate, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import Admin from "./Admin";
 import Dashboard from "./Profile";
-import Login from "./Login";
 
-export default function PrivateRoute({ component: Component, ...rest }) {
+export default function PrivateRoute() {
   const { currentUser } = useAuth();
-  const navigate = useNavigate();
-
-  const Comp = currentUser ? <Dashboard /> : <Login />;
-
-  return <Comp />;
+  // const { userType, setUserType } = useState(true);
+  if (currentUser === true) {
+    return <Admin />;
+  }
+  return currentUser ? <Dashboard /> : <Navigate to={"/login"} />;
 }

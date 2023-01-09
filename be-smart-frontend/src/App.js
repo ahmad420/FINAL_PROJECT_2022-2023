@@ -19,7 +19,8 @@ function App() {
       <NavBar />
       <Container
         className="d-flex align-items-center justify-content-center"
-        style={{ minHeight: "100vh" }}
+        s
+        tyle={{ minHeight: "100vh" }}
       >
         <div className="w-100" style={{}}>
           <Router>
@@ -40,6 +41,7 @@ function App() {
           </Router>
         </div>
       </Container>
+
       <Footer />
     </>
   );
