@@ -14,6 +14,7 @@ import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
 import ProfileAdmin from "./pages/ProfileAdmin";
 import Admin from "./pages/Admin";
+import AdminVisualData from "./pages/AdminVisualData";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/adminpage" element={<Admin />} />
+              <Route path="/visualdata" element={<AdminVisualData />} />
             </Routes>
           </AuthProvider>
         </Router>
