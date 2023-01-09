@@ -46,8 +46,8 @@ export default function App() {
                 Company name
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+              Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit lorem ipsum dolor sit amet, consectetur adipisicing
                 elit.
               </p>
             </MDBCol>
@@ -56,7 +56,7 @@ export default function App() {
               <h6 className="text-uppercase fw-bold mb-4">Products</h6>
               <p>
                 <a href="#!" className="text-reset">
-                  Angular
+                React
                 </a>
               </p>
               <p>
@@ -66,12 +66,12 @@ export default function App() {
               </p>
               <p>
                 <a href="#!" className="text-reset">
-                  Vue
+                React
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-reset">
-                  Laravel
+                React
                 </a>
               </p>
             </MDBCol>
@@ -104,17 +104,17 @@ export default function App() {
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-                New York, NY 10012, US
+              Ruppin
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
-                info@example.com
+                beSmart@example.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" /> + 01 234 567 88
+                <MDBIcon icon="phone" className="me-3" /> + 972 234 567 88
               </p>
               <p>
-                <MDBIcon icon="print" className="me-3" /> + 01 234 567 89
+                <MDBIcon icon="print" className="me-3" /> + 972 234 567 89
               </p>
             </MDBCol>
           </MDBRow>
@@ -123,11 +123,16 @@ export default function App() {
 
       <div
         className="text-center p-4"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
-      >
-        © 2021 Copyright:
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
+        
         <a className="text-reset fw-bold" href="/">
-          MDBootstrap.com
+        © 2023 Copyright : 
+        </a>
+        <a className="text-reset fw-bold" href="/">
+           BeSmart By
+        </a>
+        <a className="text-reset fw-bold" href="/">
+          Omar Subh & Ahmad Abu Fani
         </a>
       </div>
     </MDBFooter>

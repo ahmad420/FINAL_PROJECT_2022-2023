@@ -1,5 +1,4 @@
 import React from "react";
-import { Carousel, Nav } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import { Navigate } from "react-router-dom";
 import About from "../components/Home/About";
@@ -13,8 +12,8 @@ const Home = () => {
   return (
     <div className="Main">
       <div className="landingpage">
-        <Box/>
-        <About/> 
+        <Box />
+        <About />
         <div className="auction">
           <div className="title">
             <p className="titlebold">Be Smart Servicse</p>
@@ -27,7 +26,7 @@ const Home = () => {
         </div>
 
 
-
+        
       </div>
 
     </div>

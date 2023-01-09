@@ -65,12 +65,12 @@
   margin: auto;
   padding: 0 80px;
   position: relative;
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
   background-image: url(https://uploads-ssl.webflow.com/6155c161f43d8f13586b9b67/6156089b014b47bcc48fc1d8_4.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 100vw;
+  min-width: 100%;
 }
 
 .landingpage::before {
