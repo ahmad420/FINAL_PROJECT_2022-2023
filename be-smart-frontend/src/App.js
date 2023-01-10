@@ -25,6 +25,12 @@ function App() {
         <Router>
           <AuthProvider>
             <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/pricing" element={<Pricing />} />
+              <Route path="/adminpage" element={<Admin />} />
+              <Route path="/visualdata" element={<AdminVisualData />} />
               
               <Route  path="/user" element={<PrivateRoute />}>
 
@@ -36,12 +42,7 @@ function App() {
 
               </Route>
 
-              <Route path="/" element={<Home />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/adminpage" element={<Admin />} />
-              <Route path="/visualdata" element={<AdminVisualData />} />
+             
             </Routes>
           </AuthProvider>
         </Router>
