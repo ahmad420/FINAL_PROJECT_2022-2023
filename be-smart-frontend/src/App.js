@@ -24,20 +24,20 @@ function App() {
         <Router>
           <AuthProvider>
             <Routes>
-              <Route exact path="/profile" element={<PrivateRoute />}>
-                {/* <Route exact path="/profile" element={<Dashboard />} /> */}
+              
+              <Route  path="/user" element={<PrivateRoute />}>
+
+                <Route  path="/user/profile" element={<Dashboard/>} />
+                <Route  path="/user/profileAdmin" element={<ProfileAdmin />} />
+                <Route path="/user/forgot-password" element={<ForgotPassword />} />
+                <Route  path="/user/update-profile" element={<UpdateProfile />} />
+                <Route path="/user/admin" element={<ProfileAdmin/>} />
+
               </Route>
 
-              <Route path="/admin" element={<PrivateRoute />} />
-
-              <Route exact path="/profile" element={<PrivateRoute />} />
-              <Route exact path="/profileAdmin" element={<ProfileAdmin />} />
-
-              <Route exact path="/update-profile" element={<UpdateProfile />} />
               <Route path="/" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/adminpage" element={<Admin />} />
             </Routes>
