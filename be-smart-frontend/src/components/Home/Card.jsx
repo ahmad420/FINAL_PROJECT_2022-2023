@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Cards.css"
 import {
   MDBCard,
   MDBCardBody,
@@ -8,7 +9,7 @@ import {
 
 export default function Card(props) {
   return (
-    <MDBCard className='Card' style={{maxHeight:400}} >
+    <MDBCard className='servicse' style={{maxHeight:400}} >
       <MDBCardImage src={props.img} alt='...' position='top' />
       <MDBCardBody>
         <MDBCardText>
