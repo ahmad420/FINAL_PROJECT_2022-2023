@@ -1,0 +1,15 @@
+.list {
+      display: flex;
+   padding: 8vh;
+   justify-content: space-between;
+   
+}
+@media screen and (max-width: 900px) {
+.list{
+      flex-direction: column;
+     padding: 3;
+      justify-content: center;
+}
+}
+
+

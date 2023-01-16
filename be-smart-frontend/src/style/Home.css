@@ -3,62 +3,10 @@
 }
 .Main{
   margin: 0;
+  
 }
 /*     */
-.Card {
-  width: 15vw;
- padding: 1.9vh;
- margin: 2vw;
 
-}
-
-.CardList{
-  display: flex;
-  justify-content: space-between;
-}
-.right{
-  display: flex;
-  justify-content:flex-end ;
-}
-.left{
-  display: flex;
-  justify-content:flex-start ;
-}
-.section1{
-  background-color: white;
-  height: 25vh;
-  width: 55vw;
- margin: 3vh;
- 
-  padding: 2vh;
-  display: flex;
-  left: 0;
-  justify-content: flex-end;
-}
-.section2{
-  background-color: white;
-  height: 25vh;
-  width: 55vw;
-  margin: 3vh;
-  right:0;
-  padding: 2vh;
-  display: flex;
-  left: 0;
-}
-@media screen and (max-width: 900px) {
-  .CardList{
-   flex-direction: column;
-   align-items: center;
-
-   gap: 5vh;
-   padding: 2vh;
-   margin: 3vh;
-   
-  }
-  .Card {
-    width: 60%;
-  }
-}
 /*     */
 
 .landingpage {
@@ -67,7 +15,7 @@
   position: relative;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-image: url(https://uploads-ssl.webflow.com/6155c161f43d8f13586b9b67/6156089b014b47bcc48fc1d8_4.jpg);
+  background-image: url(https://static.vecteezy.com/system/resources/previews/006/614/741/large_2x/abstract-background-blue-wave-elegant-style-perfect-for-wallpaper-design-promotion-presentation-sosial-media-post-etc-free-photo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 100%;

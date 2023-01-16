@@ -1,0 +1,121 @@
+.cardContainer {
+    width: 100%;
+    text-align: center;
+
+}
+
+.priceCrad {
+    width: 17vw;
+    background-color: aliceblue;
+    border: solid white;
+    border-radius: 4%;
+    padding: 2vh;
+    margin: 3vh;
+    height: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+.price {
+    color: red;
+
+}
+
+sup {
+    color: black;
+}
+
+#priceCardIcon {
+    color: black;
+    font-size: 2rem;
+}
+
+
+.orderContainer{
+    height: 10vh;
+    padding: 2vh;
+}
+#aOrder {
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+   
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    padding: 0.75rem 1.5rem;
+    transition: 0.5s;
+  }
+  
+  #aOrder:hover {
+    letter-spacing: 0.25rem;
+    background: rgb(0, 237, 100);
+    color:  rgb(0, 237, 100);
+    box-shadow: 0 0 50px 10px  rgb(0, 237, 100);
+  }
+  
+  #aOrder::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+  }
+  
+  #aOrder #orderSpan {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #aOrder i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  #aOrder i::before {
+    content: "";
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid  rgb(0, 237, 100);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+  }
+  
+  #aOrder:hover i::before {
+    left: 20%;
+    width: 20px;
+  }
+  
+  #aOrder i::after {
+    content: "";
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid  rgb(0, 237, 100);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+  }
+  
+  #aOrder:hover i::after {
+    left: 80%;
+    width: 20px;
+  }
+
+
+@media screen and (max-width: 900px) {
+    .priceCrad {
+        width: 60vw;
+
+    }
+
+    
+}

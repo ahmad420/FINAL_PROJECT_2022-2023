@@ -1,0 +1,95 @@
+.Aside {
+      color: #fff;
+      width:200px;
+      padding-left: 2px;
+      height: 100%;
+      min-height: 60vh;
+      background-image: linear-gradient(30deg , #0048bd,#746D87, #44a7fd);
+    
+    }
+    
+    .Aside a {
+      font-size: 10px;
+      color: #fff;
+      display: block;
+      padding: 12px;
+      padding-left: 30px;
+      text-decoration: none;
+      -webkit-tap-highlight-color:transparent;
+    }
+    
+    .Aside a:hover {
+      color: #746D87;
+      background: #fff;
+      outline: none;
+      position: relative;
+      background-color: #fff;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    
+    .Aside a i {
+      margin-right: 5px;
+    }
+    
+    .Aside a:hover::after {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      bottom: 100%;
+      right: 0;
+      height: 35px;
+      width: 35px;
+      border-bottom-right-radius: 18px;
+      box-shadow: 0 20px 0 0 #fff;
+    }
+    
+    .Aside a:hover::before {
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      top: 38px;
+      right: 0;
+      height: 35px;
+      width: 35px;
+      border-top-right-radius: 18px;
+      box-shadow: 0 -20px 0 0 #fff;
+    }
+    
+    .Aside p {
+      margin: 0;
+      padding: 40px 0;
+      text-align: center;
+    }
+    
+ 
+    
+    .social {
+      height: 0;  
+    }
+    
+    .social i:before {
+      width: 14px;
+      height: 14px;
+      font-size: 14px;
+      position: fixed;
+      color: #fff;
+      background: #746D87;
+      padding: 10px;
+      border-radius: 50%;
+      top:5px;
+      right:5px;
+    }
+    @media screen and (max-width: 1100px){
+      .Aside {
+        font-size: smaller;
+        width:100px;
+       
+      }
+      .Aside a {
+        font-size: .9em;
+        color: #fff;
+        display: block;
+        padding: 4px;
+      }
+    }

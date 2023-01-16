@@ -7,6 +7,8 @@ import Card from "../components/Home/Card";
 import CardList from "../components/Home/CardsList";
 
 import "../style/Home.css";
+import "../style/SiginUp-In.css";
+
 
 const Home = () => {
   return (
