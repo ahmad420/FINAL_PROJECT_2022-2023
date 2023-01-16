@@ -1,6 +1,6 @@
 import React from 'react'
-import Aside from '../components/Profile/Aside'
-import "../style/Profile.css"
+import Aside from './Aside'
+import "../../style/Profile.css"
 
 
 export default function AddItem() {

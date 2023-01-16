@@ -16,7 +16,8 @@ import Pricing from "./pages/Pricing";
 import Admin from "./pages/Admin";
 import AdminVisualData from "./pages/AdminVisualData";
 import Aside from "./components/Profile/Aside";
-import AddItem from "./pages/AddItem";
+import AddItem from "./components/Profile/AddItem";
+
 
 function App() {
   return (
