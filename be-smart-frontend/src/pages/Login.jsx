@@ -44,24 +44,24 @@ export default function Login() {
 
       <MDBCard className='text-black m-5' style={{ borderRadius: '25px' }}>
         <MDBCardBody>
-        {error && <Alert variant="danger">{error}</Alert>}
+          {error && <Alert variant="danger">{error}</Alert>}
 
           <Form onSubmit={handleSubmit}>
             <MDBRow>
               <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign In</p>
+                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign In</p>
 
 
 
                 <div className="d-flex flex-row align-items-center mb-4">
                   <MDBIcon fas icon="envelope me-3" size='lg' />
-                  <MDBInput label='Your Email' id='form2' type='email'  ref={emailRef} required />
+                  <MDBInput label='Your Email' id='form2' type='email' ref={emailRef} required />
                 </div>
 
                 <div className="d-flex flex-row align-items-center mb-4">
                   <MDBIcon fas icon="lock me-3" size='lg' />
-                  <MDBInput label='Password' id='form3' type='password' ref={passwordRef} required  />
+                  <MDBInput label='Password' id='form3' type='password' ref={passwordRef} required />
                 </div>
 
 
@@ -69,19 +69,22 @@ export default function Login() {
                 <div className='mb-4'>
                   <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remmber Me' />
                 </div>
-
-                <MDBBtn className='mb-4' disabled={loading}  type="submit" size='lg'>Login</MDBBtn>
+                <MDBBtn className='mb-4' disabled={loading} type="submit" size='lg'>Login</MDBBtn>
+                <div className="w-100 text-center mt-3">
+                  <Link to="/forgot-password">Forgot Password?</Link>
+                </div>
 
               </MDBCol>
 
               <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
-              <MDBCardImage src={require('../Images/jpeg.jpeg')} fluid />
+                <MDBCardImage src={require('../Images/jpeg.jpeg')} fluid />
               </MDBCol>
 
             </MDBRow>
             <div className="w-100 text-center mt-2">
-            Need an account? <Link to="/signup">Sign Up</Link>
-          </div>
+              Need an account? <Link to="/signup">Sign Up</Link>
+            </div>
+
           </Form>
         </MDBCardBody>
       </MDBCard>

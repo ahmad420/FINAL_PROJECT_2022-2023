@@ -17,6 +17,7 @@ import Admin from "./pages/Admin";
 import AdminVisualData from "./pages/AdminVisualData";
 import Aside from "./components/Profile/Aside";
 import AddItem from "./components/Profile/AddItem";
+import Items from "./components/Profile/Items";
 
 
 function App() {
@@ -35,18 +36,19 @@ function App() {
               <Route path="/adminpage" element={<Admin />} />
               <Route path="/visualdata" element={<AdminVisualData />} />
 
-              <Route path="/Aside" element={<Aside/>} />
-              
-              <Route  path="/user" element={<PrivateRoute />}>
-                
-                <Route  path="/user/profile" element={<Dashboard/>} />
-                <Route path="/user/forgot-password" element={<ForgotPassword />} />
-                <Route  path="/user/update-profile" element={<UpdateProfile />} />
-                <Route  path="/user/add-item" element={<AddItem />} />
+              <Route path="/Aside" element={<Aside />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+
+              <Route path="/user" element={<PrivateRoute />}>
+
+                <Route path="/user/profile" element={<Dashboard />} />
+                <Route path="/user/update-profile" element={<UpdateProfile />} />
+                <Route path="/user/add-item" element={<AddItem />} />
+                <Route path="/user/items" element={<Items />} />
 
               </Route>
 
-             
+
             </Routes>
           </AuthProvider>
         </Router>
