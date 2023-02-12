@@ -17,7 +17,8 @@ export default function Box() {
         </div>
       </div>
       <div className="display">
-        <img className="display-nft" src={require("../../Images/BeSmart.png")} />
+        <img className="display-nft " src={require("../../Images/BeSmart.png")} />
+        
 
       </div>
     </div>

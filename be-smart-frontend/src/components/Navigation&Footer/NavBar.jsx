@@ -17,6 +17,7 @@ import {
   MDBCollapse,
 } from "mdb-react-ui-kit";
 
+
 export default function NavBar() {
   const [showNavText, setShowNavText] = useState(false);
 
@@ -48,8 +49,8 @@ export default function NavBar() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink active aria-current="page" href="">
-                Features
+              <MDBNavbarLink active aria-current="page" href="/contact-us">
+                Contact Us
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>

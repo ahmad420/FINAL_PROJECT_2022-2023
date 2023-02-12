@@ -44,7 +44,7 @@ export default function Aside() {
         <Link to={"/user/add-item"}>
        
           <i className="fa fa-plus" aria-hidden="true" />
-          Add Item
+          Items
         
 
         </Link>
@@ -52,7 +52,7 @@ export default function Aside() {
         <Link to={"/user/items"}>
        
           <i className="fa fa-plus" aria-hidden="true" />
-         Items
+         Edit Items Quantity
         
 
         </Link>

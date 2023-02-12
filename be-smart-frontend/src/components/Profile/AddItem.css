@@ -15,7 +15,7 @@
      margin: 4%;
      width: 100%;
     
-    
+    background-image: url();
      text-align: center;
 }
 .quantity{
@@ -27,4 +27,9 @@
 .addQuantity{
       background-color: rgb(255, 255, 255);
       width: 100%;
+}
+#quantity { 
+font-size: large;
+color: rgb(0, 0, 0);
+padding: 9px;
 }

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Aside from './Aside'
 import "../../style/Profile.css"
 import { useEffect, useState } from "react";
 import { db, fs } from '../../utils/firebaseConfig'
 import "./AddItem.css"
 import { Table } from 'react-bootstrap';
+import ProudctsContext, { useProductsArr } from '../../contexts/ProudctsContext';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function AddItem() {
 
@@ -27,61 +29,8 @@ export default function AddItem() {
       }, []);
 
       const [warehouse, setwarehouse] = useState([])
-      const [products, setProducts] = useState([
-            {
-                  id: 1,
-                  name: "BLEU DE CHANEL",
-                  price: 534,
-                  url:
-                        "https://www.dutylemon.com/warehouse/dynamic/209060.jpg",
-                  warehouse: false,
-                  quantity: 1,
-            },
-            {
-                  id: 2,
-                  name: "Dior SAUVAGE",
-                  price: 349,
-                  url:
-                        "https://d3m9l0v76dty0.cloudfront.net/system/photos/6348704/large/8224590fed493faa39179a2343778163.jpg",
-                  warehouse: false,
-                  quantity: 1,
-            },
-            {
-                  id: 3,
-                  name: "Gucci INTENSE OUD",
-                  price: 340,
-                  url:
-                        "https://d3m9l0v76dty0.cloudfront.net/system/photos/5537818/large/89ff7ab2f227c6acf6a5397e9128f9d4.jpg",
-                  warehouse: false,
-                  quantity: 1,
-            },
-            {
-                  id: 4,
-                  name: "Jean Paul GAULTIER",
-                  price: 350,
-                  url:
-                        "https://res.cloudinary.com/shufersal/image/upload/f_auto,q_auto/v1551800922/prod/product_images/products_zoom/RYP48_Z_P_8435415012690_1.png",
-                  warehouse: false,
-                  quantity: 1,
-            },
-            {
-                  id: 5,
-                  name: "TOM FORD ",
-                  price: 449,
-                  url:
-                        "https://fraguru.com/mdimg/perfume/375x500.1018.jpg",
-                  warehouse: false,
-                  quantity: 1,
-            }, {
-                  id: 6,
-                  name: "COCO Chanel ",
-                  price: 649,
-                  url:
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Lg7aU1leUTGXG47dTSGDekQCUbk7kkBvcPI5IRlYbbv6I38wpVmlgevJPlDYcZ9rCYk&usqp=CAU",
-                  warehouse: false,
-                  quantity: 1,
-            },
-      ])
+      const warehoseProducts = useProductsArr()
+      const [products, setProducts] = useState(warehoseProducts)
       function addtowarehouse(item) {
 
 
@@ -141,8 +90,8 @@ export default function AddItem() {
                   <div className="right-profile">
 
                         <div className='container mt-2'>
-                              
-                        <div className='row justify-content-center productCards'>
+
+                              <div className='row justify-content-center productCards'>
                                     {products.map((item) => (
                                           <div className='col-3' key={item.id}>
                                                 <div className="card proudctCard "  >
@@ -174,66 +123,9 @@ export default function AddItem() {
                               </div>
                               <div className='addQuantity' >
 
-                                    <h2 className='text-center quantity h2'>Add Quantity</h2>
+                                    <h2 className='text-center quantity h2'>Add Item To the Wareouse</h2>
 
-                                    <div className='row mt-3'>
-                                          <table className="table  text-center">
-                                                <thead>
-                                                      <tr className='quantity'>
-                                                            <th scope="col">Product Id</th>
-                                                            <th scope="col">Product Img</th>
-                                                            <th scope="col">Product Name</th>
-                                                            <th scope="col">Price</th>
-                                                            <th scope="col">Quantity</th>
-                                                            <th scope="col">Remove From Warehouse</th>
-                                                      </tr>
-                                                </thead>
-                                                <tbody className='quantity'>
-                                                      {
-                                                            warehouse.map((i, index) => (
-
-                                                                  < tr key={i.id}>
-                                                                        <th scope="row">{index + 1}</th>
-                                                                        <th scope="row">
-                                                                              <img src={i.url} style={{ width: '4rem' }} />
-                                                                        </th>
-                                                                        <td>{i.name}</td>
-                                                                        <td>
-                                                                              {i.price}
-                                                                        </td>
-                                                                        <td>
-                                                                              <button
-                                                                                    onClick={() => decrease(i)}
-                                                                                    className="btn btn-primary btn-sm"
-                                                                              >
-                                                                                    -
-                                                                              </button>
-                                                                              {i.quantity}
-                                                                              <button
-                                                                                    onClick={() => increase(i)}
-                                                                                    className="btn btn-primary btn-sm"
-                                                                                    size="sm"
-                                                                              >
-                                                                                    +
-                                                                              </button>
-                                                                        </td>
-
-                                                                        <td>
-                                                                              <button onClick={() => removetowarehouse(i)} className="btn btn-danger">
-                                                                                    Remove
-                                                                              </button>
-                                                                        </td >
-                                                                  </tr >
-                                                            ))
-                                                      }
-                                                </tbody>
-                                          </table>
-                                    </div>
-                                    <div className="row  quantity">
-                                          <div className="col text-center">
-                                                <h4>TOTAL: {total()}</h4>
-                                          </div>
-                                    </div>
+                                    
 
                                     <div className=''>
 
@@ -251,7 +143,7 @@ export default function AddItem() {
                                                 <tbody>
                                                       <tr>
 
-                                                            <td> <input   name="id" type="text" onChange={e => setId(e.target.value)} /></td>
+                                                            <td> <input name="id" type="text" onChange={e => setId(e.target.value)} /></td>
                                                             <td><input name="name" type="text" onChange={e => setName(e.target.value)} /></td>
                                                             <td><input name="price" type="number" onChange={e => setPrice(e.target.value)} /></td>
                                                             <td> <input name="quantity" type="number" onChange={e => setQuantity(e.target.value)} /></td>
