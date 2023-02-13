@@ -3,7 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import Aside from "./Aside";
-import "../../style/Profile.css"
+import "../../style/Profile.css";
 
 export default function UpdateProfile() {
   const emailRef = useRef();
@@ -85,7 +85,6 @@ export default function UpdateProfile() {
           <Link to="/user/profile">Cancel</Link>
         </div>
       </Card>
-
     </div>
   );
 }

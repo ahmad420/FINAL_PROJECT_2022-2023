@@ -43,12 +43,11 @@ export default function App() {
             <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
               <h6 className="text-uppercase fw-bold mb-4">
                 <MDBIcon icon="gem" className="me-3" />
-                Company name
+                Be Smart
               </h6>
               <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit lorem
+                ipsum dolor sit amet, consectetur adipisicing elit.
               </p>
             </MDBCol>
 
@@ -56,22 +55,22 @@ export default function App() {
               <h6 className="text-uppercase fw-bold mb-4">Products</h6>
               <p>
                 <a href="#!" className="text-reset">
-                React
-                </a>
-              </p>
-              <p>
-                <a href="#!" className="text-reset">
                   React
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-reset">
-                React
+                  Lorem
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-reset">
-                React
+                  dolor
+                </a>
+              </p>
+              <p>
+                <a href="#!" className="text-reset">
+                  amet
                 </a>
               </p>
             </MDBCol>
@@ -104,7 +103,7 @@ export default function App() {
               <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
-              Ruppin
+                Ruppin
               </p>
               <p>
                 <MDBIcon icon="envelope" className="me-3" />
@@ -123,13 +122,13 @@ export default function App() {
 
       <div
         className="text-center p-4"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
-        
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
+      >
         <a className="text-reset fw-bold" href="/">
-        © 2023 Copyright : 
+          © 2023 Copyright :
         </a>
         <a className="text-reset fw-bold" href="/">
-           BeSmart By
+          BeSmart By
         </a>
         <a className="text-reset fw-bold" href="/">
           Omar Subh & Ahmad Abu Fani

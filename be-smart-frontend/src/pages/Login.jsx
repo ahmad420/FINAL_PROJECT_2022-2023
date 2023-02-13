@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import { Form, Button, Card, Alert } from "react-bootstrap";
+import { Form, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import "../style/SiginUp-In.css"
+import "../style/SiginUp-In.css";
 
 import {
   MDBBtn,
@@ -14,9 +14,8 @@ import {
   MDBCardImage,
   MDBInput,
   MDBIcon,
-  MDBCheckbox
-}
-  from 'mdb-react-ui-kit';
+  MDBCheckbox,
+} from "mdb-react-ui-kit";
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -41,55 +40,78 @@ export default function Login() {
   }
   return (
     <MDBContainer fluid>
-
-      <MDBCard className='text-black m-5' style={{ borderRadius: '25px' }}>
+      <MDBCard className="text-black m-5" style={{ borderRadius: "25px" }}>
         <MDBCardBody>
           {error && <Alert variant="danger">{error}</Alert>}
 
           <Form onSubmit={handleSubmit}>
             <MDBRow>
-              <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
-
-                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign In</p>
-
-
-
-                <div className="d-flex flex-row align-items-center mb-4">
-                  <MDBIcon fas icon="envelope me-3" size='lg' />
-                  <MDBInput label='Your Email' id='form2' type='email' ref={emailRef} required />
-                </div>
+              <MDBCol
+                md="10"
+                lg="6"
+                className="order-2 order-lg-1 d-flex flex-column align-items-center"
+              >
+                <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                  Sign In
+                </p>
 
                 <div className="d-flex flex-row align-items-center mb-4">
-                  <MDBIcon fas icon="lock me-3" size='lg' />
-                  <MDBInput label='Password' id='form3' type='password' ref={passwordRef} required />
+                  <MDBIcon fas icon="envelope me-3" size="lg" />
+                  <MDBInput
+                    label="Your Email"
+                    id="form2"
+                    type="email"
+                    ref={emailRef}
+                    required
+                  />
                 </div>
 
-
-
-                <div className='mb-4'>
-                  <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remmber Me' />
+                <div className="d-flex flex-row align-items-center mb-4">
+                  <MDBIcon fas icon="lock me-3" size="lg" />
+                  <MDBInput
+                    label="Password"
+                    id="form3"
+                    type="password"
+                    ref={passwordRef}
+                    required
+                  />
                 </div>
-                <MDBBtn className='mb-4' disabled={loading} type="submit" size='lg'>Login</MDBBtn>
+
+                <div className="mb-4">
+                  <MDBCheckbox
+                    name="flexCheck"
+                    value=""
+                    id="flexCheckDefault"
+                    label="Remmber Me"
+                  />
+                </div>
+                <MDBBtn
+                  className="mb-4"
+                  disabled={loading}
+                  type="submit"
+                  size="lg"
+                >
+                  Login
+                </MDBBtn>
                 <div className="w-100 text-center mt-3">
                   <Link to="/forgot-password">Forgot Password?</Link>
                 </div>
-
               </MDBCol>
 
-              <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
-                <MDBCardImage src={require('../Images/jpeg.jpeg')} fluid />
+              <MDBCol
+                md="10"
+                lg="6"
+                className="order-1 order-lg-2 d-flex align-items-center"
+              >
+                <MDBCardImage src={require("../Images/jpeg.jpeg")} fluid />
               </MDBCol>
-
             </MDBRow>
             <div className="w-100 text-center mt-2">
               Need an account? <Link to="/signup">Sign Up</Link>
             </div>
-
           </Form>
         </MDBCardBody>
       </MDBCard>
-
-
 
       <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -99,7 +121,6 @@ export default function Login() {
         href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         rel="stylesheet"
       />
-
     </MDBContainer>
   );
 }

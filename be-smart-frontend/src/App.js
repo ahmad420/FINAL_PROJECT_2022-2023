@@ -12,7 +12,6 @@ import NavBar from "./components/Navigation&Footer/NavBar";
 import Footer from "./components/Navigation&Footer/Footer";
 import Home from "./pages/Home";
 import Pricing from "./pages/Pricing";
-
 import Admin from "./pages/Admin";
 import AdminVisualData from "./pages/AdminVisualData";
 import Aside from "./components/Profile/Aside";
@@ -21,7 +20,6 @@ import Items from "./components/Profile/Items";
 import ProudctsContext from "./contexts/ProudctsContext";
 import ContactUs from "./pages/ContactUs";
 import Order from "./pages/Order";
-
 
 function App() {
   return (
@@ -39,19 +37,20 @@ function App() {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/adminpage" element={<Admin />} />
                 <Route path="/visualdata" element={<AdminVisualData />} />
-                <Route path="/contact-us" element={<ContactUs/>}/> 
-                <Route path="/order" element={<Order/>}/>
+                <Route path="/contact-us" element={<ContactUs />} />
+                <Route path="/order" element={<Order />} />
                 <Route path="/Aside" element={<Aside />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
 
                 <Route path="/user" element={<PrivateRoute />}>
                   <Route path="/user/profile" element={<Dashboard />} />
-                  <Route path="/user/update-profile" element={<UpdateProfile />} />
+                  <Route
+                    path="/user/update-profile"
+                    element={<UpdateProfile />}
+                  />
                   <Route path="/user/add-item" element={<AddItem />} />
                   <Route path="/user/items" element={<Items />} />
                 </Route>
-
-
               </Routes>
             </ProudctsContext>
           </AuthProvider>

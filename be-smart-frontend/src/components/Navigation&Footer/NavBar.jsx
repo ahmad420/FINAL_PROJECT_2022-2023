@@ -1,7 +1,3 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavBar.css";
 
 import React, { useState } from "react";
@@ -16,7 +12,6 @@ import {
   MDBNavbarToggler,
   MDBCollapse,
 } from "mdb-react-ui-kit";
-
 
 export default function NavBar() {
   const [showNavText, setShowNavText] = useState(false);

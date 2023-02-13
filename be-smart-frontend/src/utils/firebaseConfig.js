@@ -1,15 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import { useState, useEffect } from "react"
-import {
-  collection,
-  onSnapshot,
-  doc,
-  addDoc,
-  deleteDoc
-} from "firebase/firestore"
-
 
 const app = firebase.initializeApp({
   apiKey: process.env.REACT_APP_PUBLIC_API_KEY,
@@ -24,7 +15,7 @@ const app = firebase.initializeApp({
 export default app;
 
 const auth = app.auth();
-const storage = firebase.storage
+const storage = firebase.storage;
 const db = firebase.firestore();
-const fs = firebase
+const fs = firebase;
 export { auth, storage, db, fs };
