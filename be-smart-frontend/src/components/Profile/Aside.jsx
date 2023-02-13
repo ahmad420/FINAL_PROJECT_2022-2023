@@ -28,29 +28,37 @@ export default function Aside() {
         <p > Menu </p>
 
         <Link to={"/user/profile"}>
-          <a href="#" >
+        
             <i className="fa fa-user" aria-hidden="true" />
             Main Profile
-          </a>
+          
         </Link>
 
         <Link to={"/user/update-profile"}>
-        <a href="#">
+        
           <i className="fa fa-wrench" aria-hidden="true" />
           Update User Profile
-        </a>
+        
         </Link>
 
         <Link to={"/user/add-item"}>
-        <a href="#" >
+       
           <i className="fa fa-plus" aria-hidden="true" />
-          Add Item
-        </a>
+          Items
+        
+
+        </Link>
+
+        <Link to={"/user/items"}>
+       
+          <i className="fa fa-plus" aria-hidden="true" />
+         Edit Items Quantity
+        
 
         </Link>
 
         <a onClick={handleLogout} >
-          <i className="fa fa-star-o" aria-hidden="true" />
+          <i className="fa fa-star-o" aria-hidden="true"  />
           Logout
         </a>
 

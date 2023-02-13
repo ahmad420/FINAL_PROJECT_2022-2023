@@ -17,6 +17,10 @@ import Admin from "./pages/Admin";
 import AdminVisualData from "./pages/AdminVisualData";
 import Aside from "./components/Profile/Aside";
 import AddItem from "./components/Profile/AddItem";
+import Items from "./components/Profile/Items";
+import ProudctsContext from "./contexts/ProudctsContext";
+import ContactUs from "./pages/ContactUs";
+import Order from "./pages/Order";
 
 
 function App() {
@@ -27,27 +31,29 @@ function App() {
       <div className="main-comp">
         <Router>
           <AuthProvider>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/pricing" element={<Pricing />} />
-              <Route path="/adminpage" element={<Admin />} />
-              <Route path="/visualdata" element={<AdminVisualData />} />
+            <ProudctsContext>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/adminpage" element={<Admin />} />
+                <Route path="/visualdata" element={<AdminVisualData />} />
+                <Route path="/contact-us" element={<ContactUs/>}/> 
+                <Route path="/order" element={<Order/>}/>
+                <Route path="/Aside" element={<Aside />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
 
-              <Route path="/Aside" element={<Aside/>} />
-              
-              <Route  path="/user" element={<PrivateRoute />}>
-                
-                <Route  path="/user/profile" element={<Dashboard/>} />
-                <Route path="/user/forgot-password" element={<ForgotPassword />} />
-                <Route  path="/user/update-profile" element={<UpdateProfile />} />
-                <Route  path="/user/add-item" element={<AddItem />} />
+                <Route path="/user" element={<PrivateRoute />}>
+                  <Route path="/user/profile" element={<Dashboard />} />
+                  <Route path="/user/update-profile" element={<UpdateProfile />} />
+                  <Route path="/user/add-item" element={<AddItem />} />
+                  <Route path="/user/items" element={<Items />} />
+                </Route>
 
-              </Route>
 
-             
-            </Routes>
+              </Routes>
+            </ProudctsContext>
           </AuthProvider>
         </Router>
       </div>

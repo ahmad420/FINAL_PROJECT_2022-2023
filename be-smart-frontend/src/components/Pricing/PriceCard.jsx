@@ -1,17 +1,10 @@
 import React from 'react';
-import {
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBCardFooter,
-  MDBRow,
-  MDBCol
-} from 'mdb-react-ui-kit';
+
 import "./PriceCard.css"
 
+
 export default function PriceCard(props) {
+ 
   return (
     <>
 
@@ -37,8 +30,8 @@ export default function PriceCard(props) {
                 <li><i className="fa fa-check" aria-hidden="true" />Live Support</li>
               </ul>
             </div>
-            <div className='orderContainer'>
-              <a  id="aOrder" href="#">
+            <div className='orderContainer'   >
+              <a  id="aOrder" href="/order">
                 <span id='orderSpan'>Order</span>
                 <i />
                 </a>

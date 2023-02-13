@@ -29,8 +29,8 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div className="Profile">
-      <Aside />
+    <div >
+      
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Password Reset</h2>
