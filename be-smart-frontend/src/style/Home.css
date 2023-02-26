@@ -1,9 +1,10 @@
 .hidden {
   display: none;
 }
-.Main{
+
+.Main {
   margin: 0;
-  
+  height: fit-content;
 }
 
 
@@ -17,6 +18,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 100%;
+
+}
+
+.about {
+  margin-top: 4vh;
 }
 
 .landingpage::before {
@@ -37,7 +43,7 @@
   height: 123px;
   left: 80%;
   top: 550px;
- 
+
   filter: blur(80px);
 }
 
@@ -74,7 +80,7 @@
 
 .box .infobox-boldtext {
   margin: 0;
-  font-family: Poppins;
+  font-family: 'Kanit', sans-serif;
   color: #FFFFFF;
   font-size: 65px;
   font-weight: 600;
@@ -85,7 +91,7 @@
 
 .box .infobox-slimtext {
   margin: 24px 0;
-  font-family: Poppins;
+  font-family: 'Kanit', sans-serif;
   color: #FFFFFF;
   font-size: 16px;
   font-weight: 400;
@@ -106,7 +112,7 @@
   background-color: #1F1D2B;
   padding: 8px 38px;
   border-radius: 16px;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -115,21 +121,35 @@
 }
 
 .box .infobox-createbtn {
+
+  display: inline-block;
+  outline: none;
   cursor: pointer;
-  margin-left: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 20px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 130px;
+  text-transform: capitalize;
+  white-space: normal;
+  font-weight: 500;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 2px #ffffff;
   background-color: transparent;
-  padding: 8px 38px;
-  border: 1px solid #D7D7D7;
-  border-radius: 16px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: -1px;
-  color: #FFFFFF;
+  height: 48px;
+
+
+
+}
+
+.box .infobox-createbtn:hover {
+  color: #1F1D2B;
+  background-color: #746D87;
 }
 
 .box .infobox .selected {
@@ -141,8 +161,8 @@
   animation-name: rightslide;
   animation-duration: 0.8s;
   padding: 17px;
-  
-  
+
+
   border-radius: 35px;
   max-height: 450px;
   max-width: 50%;
@@ -167,7 +187,7 @@
 .box .display .info {
   display: flex;
   align-items: center;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   color: #FFFFFF;
   font-weight: 600;
@@ -191,7 +211,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   color: #FFFFFF;
   font-style: normal;
   font-weight: 600;
@@ -218,21 +238,47 @@
   margin-bottom: 50px;
 }
 
+.cardList {
+  display: flex;
+  background-color: #746d877e;
+ border-radius: 19px;
+}
+
+.servicse {
+  width: 17vw;
+  padding: 1.5vh;
+  margin: 1.6vw;
+  top: 10px;
+  height: 10vh;
+ 
+}
+
+@media screen and (max-width: 900px) {
+  .cardList {
+
+    flex-direction: column;
+  }
+
+  .servicse {
+    width: 60%;
+  }
+}
+
 .auction .title .titlebold {
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
-  color: #FFFFFF;
+  color: #ffffffd0;
   font-weight: 500;
-  font-size: 48px;
+  font-size: 55px;
   line-height: 72px;
 }
 
 .auction .title .titleslim {
   margin: 0;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
-  color: #D7D7D7;
+  color: #d7d7d7;
   font-weight: 600;
   font-size: 18px;
   line-height: 36px;
@@ -256,7 +302,7 @@
 .started-boldtext {
   margin: 0;
   align-self: center;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   color: #FFFFFF;
   font-weight: 500;
@@ -267,7 +313,7 @@
 .started-slimtext {
   margin: 0;
   align-self: center;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -301,7 +347,7 @@
   margin: 0;
   margin-top: 10px;
   text-align: center;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -328,7 +374,7 @@
 }
 
 .discover-title p {
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 36px;
@@ -353,7 +399,7 @@
   border: 1px solid #D7D7D7;
   border-radius: 10px;
   background-color: transparent;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -388,7 +434,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid white;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -397,7 +443,7 @@
 }
 
 .item-date {
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -414,7 +460,7 @@
   display: flex;
   align-items: center;
   margin-right: 30px;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -435,7 +481,7 @@
   background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
   border: none;
   border-radius: 10px;
-  font-family: "Poppins";
+  font-family: 'Kanit', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -617,4 +663,12 @@
   to {
     transform: translateX(0px);
   }
+}
+
+.ImagesCarousel {
+  width: 40vw;
+  height: 60vh;
+  margin: 15px;
+  padding: 23px;
+  margin-top: 30px;
 }

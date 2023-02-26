@@ -1,14 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import Aside from "./Aside";
 import "../../style/Profile.css";
 import { useEffect, useState } from "react";
-import { db, fs } from "../../utils/firebaseConfig";
-import "./AddItem.css";
+import { db } from "../../utils/firebaseConfig";
+import "./Style/AddItem.css";
 import { Table } from "react-bootstrap";
-import ProudctsContext, {
-  useProductsArr,
-} from "../../contexts/ProudctsContext";
-import { useAuth } from "../../contexts/AuthContext";
+import {useProductsArr} from "../../contexts/ProudctsContext";
 
 export default function AddItem() {
   useEffect(() => {
@@ -39,31 +36,7 @@ export default function AddItem() {
 
     db.collection("warehouse").doc(`${item.id}`).set(item, { merge: true });
   }
-  function removetowarehouse(item) {
-    products.map((i) => {
-      if (i.id == item.id) {
-        i.warehouse = false;
-      }
-    });
-    db.collection("warehouse").doc(`${item.id}`).delete();
-  }
-  function increase(item) {
-    db.collection("warehouse")
-      .doc(`${item.id}`)
-      .update("quantity", fs.firestore.FieldValue.increment(1));
-  }
-  function decrease(item) {
-    db.collection("warehouse")
-      .doc(`${item.id}`)
-      .update("quantity", fs.firestore.FieldValue.increment(-1));
-  }
-  function total() {
-    let x = 0;
-    warehouse.map((i) => {
-      x += i.price * i.quantity;
-    });
-    return x;
-  }
+ 
   const [id, setId] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");

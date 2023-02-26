@@ -1,0 +1,27 @@
+.navbar {
+      background-color: #746D87;
+}
+
+#logoImg {
+      width: 8vw;
+      height: auto;
+    padding: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+      #logoImg {
+            width: 18vw;
+            height: auto;
+      }
+}
+
+.navbar-text {
+      padding: 0.9rem;
+      font-weight: bolder;
+    
+}
+
+.hoverTitle:hover  {
+      font-size: 130%;
+      border-radius: 4px;
+}

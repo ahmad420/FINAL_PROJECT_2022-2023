@@ -50,25 +50,9 @@ export default function Items() {
     });
     return x;
   }
-  const [id, setId] = useState("");
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [url, setUrl] = useState("");
-  const [warhouse, setWarhouse] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newElement = {
-      id: id,
-      name: name,
-      price: price,
-      quantity: quantity,
-      url: url,
-      warehouse: warhouse,
-    };
-    setProducts((oldArray) => [...oldArray, newElement]);
-  };
+ 
+  
 
   return (
     <div className="Profile">
