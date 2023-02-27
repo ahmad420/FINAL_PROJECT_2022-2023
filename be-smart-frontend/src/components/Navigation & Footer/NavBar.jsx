@@ -29,7 +29,7 @@ export default function NavBar() {
         
      
       
-      <MDBNavbarBrand href="/" className="hoverTitle" >BeSmart</MDBNavbarBrand>
+     
       <MDBNavbarToggler
 
         type="button"
@@ -43,7 +43,9 @@ export default function NavBar() {
       </MDBNavbarToggler>
       <MDBCollapse navbar show={showNavText}>
         <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
+        <MDBNavbarBrand href="/" className="hoverTitle" >BeSmart</MDBNavbarBrand>
           <MDBNavbarItem>
+            
             <MDBNavbarLink active aria-current="page" href="/">
 
               <span className="hoverTitle">Home Page</span>{" "}
@@ -69,6 +71,9 @@ export default function NavBar() {
         </MDBNavbarLink>
       </MDBCollapse>
     </MDBContainer>
+   
+
     </MDBNavbar >
+    
   );
 }
