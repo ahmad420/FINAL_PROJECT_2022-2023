@@ -24,7 +24,7 @@ export default function NavBar() {
           className="pulse"
           src={require("../../Images/BeSmart.png")}
         />
-        <MDBNavbarBrand href="/">BeSmart</MDBNavbarBrand>
+        <MDBNavbarBrand href="/">BeSmart </MDBNavbarBrand>
         <MDBNavbarToggler
           type="button"
           data-target="#navbarText"
@@ -35,7 +35,7 @@ export default function NavBar() {
         >
           <MDBIcon icon="bars" fas />
         </MDBNavbarToggler>
-        <MDBCollapse navbar show={showNavText}>
+        <MDBCollapse navbar show={showNavText} style={{ textAlign: "center" }}>
           <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
             <MDBNavbarItem>
               <MDBNavbarLink active aria-current="page" href="/">
@@ -44,7 +44,9 @@ export default function NavBar() {
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
+              
               <MDBNavbarLink active aria-current="page" href="/contact-us">
+                
                 Contact Us
               </MDBNavbarLink>
             </MDBNavbarItem>
@@ -56,7 +58,8 @@ export default function NavBar() {
           </MDBNavbarNav>
 
           <MDBNavbarLink active aria-current="page" href="/login">
-            <MDBIcon fas icon="user" />
+            Login &nbsp;
+            <MDBIcon far icon="user" />
           </MDBNavbarLink>
         </MDBCollapse>
       </MDBContainer>

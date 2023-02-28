@@ -22,11 +22,12 @@
       height: 25vh;
       width: 55vw;
      margin: 3vh;
-     
       padding: 2vh;
       display: flex;
       left: 0;
       justify-content: flex-end;
+      border-radius: 10px;
+
     }
     .section2{
       background-color: white;
@@ -37,6 +38,7 @@
       padding: 2vh;
       display: flex;
       left: 0;
+      border-radius: 10px;
     }
     @media screen and (max-width: 900px) {
       .CardList{
@@ -50,5 +52,27 @@
       }
       .servicse {
         width: 60%;
+      }
+
+      .section1{
+        background-color: white;
+        height: 25vh;
+        width: 100vw;
+       margin: 3vh 0vh;
+        padding: 2vh;
+        display: flex;
+        left: 0;
+        justify-content: flex-end;
+      }
+      .section2{
+        text-align: justify;
+        background-color: white;
+        height: 25vh;
+        width: 100vw;
+        margin: 0vh;
+        right:0;
+        padding: 2vh;
+        display: flex;
+        left: 0;
       }
     }

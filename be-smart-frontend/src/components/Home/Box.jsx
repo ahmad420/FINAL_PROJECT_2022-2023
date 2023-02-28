@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Button } from "react-bootstrap";
 export default function Box() {
   return (
     <div className="box">
@@ -13,7 +13,9 @@ export default function Box() {
           accuracy, throughput, and speed.
         </p>
         <div className="infobox-btnwrapper">
-          <button className="infobox-createbtn">Pricing</button>
+          <Button variant="light" className="infobox-createbtn">
+            Pricing
+          </Button>
         </div>
       </div>
       <div className="display">

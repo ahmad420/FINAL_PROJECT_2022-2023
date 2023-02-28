@@ -2,6 +2,7 @@ import React from "react";
 import About from "../components/Home/About";
 import Box from "../components/Home/Box";
 import CardList from "../components/Home/CardsList";
+import MapComp from "../components/Home/MapComp";
 
 import "../style/Home.css";
 import "../style/SiginUp-In.css";
@@ -14,7 +15,7 @@ const Home = () => {
         <About />
         <div className="auction">
           <div className="title">
-            <p className="titlebold">Be Smart Servicse</p>
+            <h1 className="titlebold">Be Smart Servicse</h1>
           </div>
 
           <div className="CardList">
@@ -23,6 +24,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <MapComp />
     </div>
   );
 };
