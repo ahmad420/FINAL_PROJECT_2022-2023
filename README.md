@@ -11,27 +11,29 @@ This is the React front-end implementation of the Warehouse Management Software.
   <p align="center">
     <a href="https://reactapp23.netlify.app/" ><strong>Check our website »</strong></a>
   </p>
-## Features
-****
+  
+# Features
+***
 ### Inventory Management: 
 - Allows you to track inventory levels.
 - stock movements.
 - stock transfer between warehouses.
-***
+
 ### Order Management: 
 - Enables you to manage customer orders.
 - create and track purchase order.
 - manage backorders.
-###Reporting and Analytics:
+
+### Reporting and Analytics:
 - Generates various reports and analytics to track inventory levels.
 - order status.
 - warehouse performance.
 
 ### Barcode Scanning:
--Supports barcode scanning for fast and accurate inventory tracking.
+- Supports barcode scanning for fast and accurate inventory tracking.
 
 ### User Management:
--Provides user access control to ensure data security and privacy.
+- Provides user access control to ensure data security and privacy.
 
 
 ### Technologies Used
