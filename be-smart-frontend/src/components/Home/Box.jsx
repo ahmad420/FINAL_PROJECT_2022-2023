@@ -1,10 +1,12 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import ImagesCarousel from "./ImagesCarousel";
+
 export default function Box() {
   return (
     <div className="box">
       <div className="infobox">
         <p className="infobox-boldtext">Warehouse Managent Software</p>
+        
         <p className="infobox-slimtext">
           The WMS will benefit their operational efficiency for both labor and
           physical space by monitoring work processes at various levels,
@@ -12,10 +14,9 @@ export default function Box() {
           automation assists with inventory control in a way that improves
           accuracy, throughput, and speed.
         </p>
+        <ImagesCarousel />
         <div className="infobox-btnwrapper">
-          <Button variant="light" className="infobox-createbtn">
-            Pricing
-          </Button>
+         <a href="./pricing"> <button className="infobox-createbtn">Pricing</button></a>
         </div>
       </div>
       <div className="display">
@@ -24,6 +25,7 @@ export default function Box() {
           src={require("../../Images/BeSmart.png")}
         />
       </div>
+      
     </div>
   );
 }

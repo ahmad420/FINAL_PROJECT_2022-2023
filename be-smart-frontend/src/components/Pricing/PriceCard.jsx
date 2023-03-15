@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./PriceCard.css";
+import "./Style/PriceCard.css";
 
 export default function PriceCard(props) {
   return (
@@ -38,10 +38,8 @@ export default function PriceCard(props) {
             </ul>
           </div>
           <div className="orderContainer">
-            <a id="aOrder" href="/order">
-              <span id="orderSpan">Order</span>
-              <i />
-            </a>
+          
+          <a href="./order"> <button className="infobox-createbtn">Order</button></a>
           </div>
         </div>
       </div>

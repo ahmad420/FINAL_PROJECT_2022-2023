@@ -1,7 +1,7 @@
 import React from "react";
 import PriceCard from "./PriceCard";
-import "./PriceCardsList.css";
-import "./PriceCard.css";
+import "./Style/PriceCardsList.css";
+import "./Style/PriceCard.css";
 
 export default function PriceCardList() {
   const cards = [

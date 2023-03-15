@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 
-import "./Aside.css";
+import "./Style/Aside.css";
 
 export default function Aside() {
   const [error, setError] = useState("");
@@ -36,7 +36,7 @@ export default function Aside() {
         </Link>
 
         <Link to={"/user/add-item"}>
-          <i className="fa fa-plus" aria-hidden="true" />
+          <i className="fa fa-list-ul" aria-hidden="true" />
           Items
         </Link>
 
@@ -45,10 +45,12 @@ export default function Aside() {
           Edit Items Quantity
         </Link>
 
-        <a onClick={handleLogout}>
-          <i className="fa fa-star-o" aria-hidden="true" />
-          Logout
-        </a>
+        <Link>
+          <a onClick={handleLogout}>
+            <i className="fa fa-sign-out" aria-hidden="true" />
+            Logout
+          </a>
+        </Link>
       </aside>
     </div>
   );

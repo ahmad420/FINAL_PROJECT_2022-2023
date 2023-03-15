@@ -1,8 +1,10 @@
 .Profile{
       display: flex;
       width: 100%;
+      border: 0;
 }
 
 .right-profile{
       width: 100%;
+  
 }

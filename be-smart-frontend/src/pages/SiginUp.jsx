@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Form, Button, Card, Alert } from "react-bootstrap";
+import { Form, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import "../style/SiginUp-In.css"
@@ -80,16 +80,13 @@ function Signup() {
                 </div>
 
                 <div className='mb-4'>
-                  <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' /> 
-                  
+                  <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
+
 
                 </div>
 
                 <MDBBtn className='mb-4' size='lg' disabled={loading} type="submit">Register</MDBBtn>
-                {/* <div className="mb-4">
-                  Already have an account? <Link to="/login">Log In</Link>
 
-                </div> */}
               </MDBCol>
 
               <MDBCol md='10' lg='6' className='order-1 order-lg-2 d-flex align-items-center'>
