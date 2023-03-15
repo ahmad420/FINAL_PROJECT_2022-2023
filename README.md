@@ -2,7 +2,8 @@
 
 Warehouse Management Software is a web-based application that helps businesses manage their inventory and streamline their warehouse operations.
 This is the React front-end implementation of the Warehouse Management Software.
-![Warehouse image](".\be-smart-frontend\src\Images\1212.jpeg")
+
+![Michael Scott forklift GIF](https://tenor.com/view/michael-scott-forklift-steve-carell-fall-damage-gif-16756148 "Michael Scott forklift")
 ## Features
 ****
 ### Inventory Management: 
