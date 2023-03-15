@@ -1,5 +1,5 @@
 # Be Smart - Warehouse Management Software.
-***
+
 Warehouse Management Software is a web-based application that helps businesses manage their inventory and streamline their warehouse operations.
 This is the React front-end implementation of the Warehouse Management Software.
 
@@ -26,13 +26,13 @@ Features
 ***
 
 ### Technologies Used
--React
--Redux
--React Router
--Material UI
--Axio
--Firebase
-***
+- React 
+- Redux
+- React Router
+- Material UI
+- Axio
+- Firebase
+
 ### Installation and Setup
 -Clone the repository.
 **git@github.com:ahmad420/FINAL_PROJECT_2022-2023.git **
