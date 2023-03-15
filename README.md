@@ -23,7 +23,7 @@ Features
 
 ### User Management:
 -Provides user access control to ensure data security and privacy.
-***
+
 
 ### Technologies Used
 - React 
@@ -34,15 +34,15 @@ Features
 - Firebase
 
 ### Installation and Setup
--Clone the repository.
-**git@github.com:ahmad420/FINAL_PROJECT_2022-2023.git **
--Navigate to the project directory.
+- Clone the repository.
+**git@github.com:ahmad420/FINAL_PROJECT_2022-2023.git**
+- Navigate to the project directory.
 **cd ./be-smart-frontend**
--Install the dependencies.
+- Install the dependencies.
 **npm install**
--Start the development server.
+- Start the development server.
 **npm start**
-Open a web browser and navigate to http://localhost:3000 to access the application.
+- Open a web browser and navigate to http://localhost:3000 to access the application.
 
 ### Contributing
 Contributions are welcome.
