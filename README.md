@@ -2,8 +2,15 @@
 
 Warehouse Management Software is a web-based application that helps businesses manage their inventory and streamline their warehouse operations.
 This is the React front-end implementation of the Warehouse Management Software.
+<br />
 
-![Michael Scott forklift GIF](https://tenor.com/view/michael-scott-forklift-steve-carell-fall-damage-gif-16756148 "Michael Scott forklift")
+<p align="center">
+  <img src="./be-smart-frontend/src/Images/1212.jpeg" width=720px height=360px />
+</p>
+
+  <p align="center">
+    <a href="https://reactapp23.netlify.app/" ><strong>Check our website »</strong></a>
+  </p>
 ## Features
 ****
 ### Inventory Management: 
