@@ -5,18 +5,18 @@ This is the React front-end implementation of the Warehouse Management Software.
 
 Features
 ### Inventory Management: 
--Allows you to track inventory levels.
--stock movements.
--stock transfer between warehouses.
+- Allows you to track inventory levels.
+- stock movements.
+- stock transfer between warehouses.
 ***
 ### Order Management: 
--Enables you to manage customer orders.
--create and track purchase order.
--manage backorders.
+- Enables you to manage customer orders.
+- create and track purchase order.
+- manage backorders.
 ###Reporting and Analytics:
--Generates various reports and analytics to track inventory levels.
--order status.
--and warehouse performance.
+- Generates various reports and analytics to track inventory levels.
+- order status.
+- warehouse performance.
 
 ### Barcode Scanning:
 -Supports barcode scanning for fast and accurate inventory tracking.
